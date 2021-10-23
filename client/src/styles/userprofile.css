@@ -1,0 +1,40 @@
+.user__container {
+  width: 50%;
+  height: fit-content;
+  display: block;
+  background-color: darkgray;
+  padding: 2%;
+  text-align: center;
+  border-radius: 2%;
+  box-shadow: 5px 10px 18px black;
+}
+
+.user__image {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+}
+.user__details {
+  padding: 3%;
+  font-size: small;
+  margin-top: 2%;
+}
+.user__name {
+  padding: 1%;
+}
+.user__email {
+  padding: 1%;
+}
+.user__website {
+  padding: 1%;
+}
+
+@media screen and (max-width: 768px) {
+  .user__container {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .user__image {
+    margin-top: 1rem;
+  }
+}

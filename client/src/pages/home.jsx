@@ -5,9 +5,12 @@ import HomeCard from './HomeCard';
 const Home = () => {
     const [news, setNews] = useState([]);
     
-    useEffect(async () => {
-        const res = await getDataAPI('allNews');
-        setNews(res.data.news);
+    useEffect(() => {
+        async function fetchData() {
+            const res = await getDataAPI('allNews');
+            setNews(res.data.news);
+        };
+        fetchData();
     }, []);
 
     return (

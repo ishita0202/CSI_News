@@ -8,7 +8,7 @@ const NewsCard = ({n}) => {
     return (   
         <div>
             <div className="newscard__img">
-                <img src={n.images[0].url} />
+                <img src={n.images[0].url} alt="news"/>
             </div>
             <div className="newscard__header">
                 <p className="newscard__title">{n.title}</p>

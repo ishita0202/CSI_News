@@ -1,5 +1,5 @@
 .about_container {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -119,4 +119,11 @@
   padding: 1rem 2rem;
   margin: 1rem 1rem 0 1rem;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about_container {
+    top: 110%;
+    height: 100%;
+  }
 }

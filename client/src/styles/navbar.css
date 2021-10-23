@@ -285,6 +285,7 @@
   font-size: 1rem;
   outline: 0;
   vertical-align: center;
+  width: 80%;
   /* padding: 1.5rem 3.5rem; */
 }
 
@@ -319,6 +320,7 @@
 @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
+    width: auto;
   }
   .input-group {
     width: auto;
@@ -407,4 +409,15 @@ input::-webkit-calendar-picker-indicator {
 
 .search__title {
   font-size: 1rem;
+}
+
+.logo_nav {
+  width: 5rem;
+  height: fit-content;
+  display: block;
+  transform: translateY(-5px);
+  margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
 }

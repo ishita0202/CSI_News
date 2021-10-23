@@ -117,7 +117,7 @@ const EditNews = ({setEditNews, n}) => {
                 </select>
                 <label className="addNews__label" htmlFor="file_up">Images</label>
                 <div className="addNews__imgUpload">
-                    <img className="addNews__add" src={addIcon} alt="add image" />
+                    <img className="addNews__add" src={addIcon} alt="edit news" />
                     <input onChange={handleChangeImages} className="addNews__images" type="file" name="file" id="file_up" accept="image/*" multiple/>
                 </div>
                 

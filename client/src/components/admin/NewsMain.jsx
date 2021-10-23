@@ -6,10 +6,13 @@ import { getDataAPI } from './../../utils/fetchData';
 const News_Main = () => {
     const [news, setNews] = useState([]);
 
-    useEffect(async () => {
-        const res = await getDataAPI('allnews');
-        setNews(res.data.news);
-    }, []);
+    useEffect(() => {
+        async function fetchData() {
+            const res = await getDataAPI('allnews');
+            setNews(res.data.news);
+        }
+        fetchData();
+    }, [setNews]);
     
     return (
         <div className="anews__container">

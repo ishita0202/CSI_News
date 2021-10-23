@@ -17,7 +17,7 @@ const AddNews = ({setAddNews}) => {
 
     const [news, setNews] = useState(state);
     const [images, setImages] = useState([]);
-    const { title, content, category, user } = news;
+    const { title, content, category } = news;
 
     const handleChangeInput = e => {
         const { name, value } = e.target;
@@ -112,7 +112,7 @@ const AddNews = ({setAddNews}) => {
                 </select>
                 <label className="addNews__label" htmlFor="file_up">Images</label>
                 <div className="addNews__imgUpload">
-                    <img className="addNews__add" src={addIcon} alt="add image" />
+                    <img className="addNews__add" src={addIcon} alt="add news" />
                     <input onChange={handleChangeImages} className="addNews__images" type="file" name="file" id="file_up" accept="image/*" multiple/>
                 </div>
                 

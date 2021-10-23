@@ -21,6 +21,7 @@
 .anews__main {
   margin-right: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -59,7 +60,15 @@
   margin-top: 1rem;
 }
 
+.lnk {
+  text-decoration: none;
+  color: #000;
+}
+
 @media screen and (min-width: 1024px) {
+  .anews__main {
+    flex-direction: row;
+  }
   .anews__card {
     flex-direction: row;
   }
