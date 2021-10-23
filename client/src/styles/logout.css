@@ -1,0 +1,9 @@
+.logout__btn {
+  text-decoration: none;
+  color: #ba0c2e;
+  transition: color 0.3s;
+}
+
+.logout__btn:hover {
+  color: #000;
+}

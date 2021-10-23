@@ -1,0 +1,13 @@
+.errMsg {
+  color: red;
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.successMsg {
+  color: rgba(2, 180, 2, 0.911);
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: bold;
+}

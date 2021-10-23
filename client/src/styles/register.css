@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: #f8f8f8;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.reg__image {
+  min-height: 100%;
+  min-width: 50%;
+  width: 50%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.reg__main {
+  min-height: 100%;
+  min-width: 50%;
+  width: 50%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  /* background: pink; */
+}
+
+#reg__title {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  color: #143774;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0.7em 0;
+}
+
+.reg__sub {
+  font-weight: 700;
+  color: #277d68;
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.reg__form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2em;
+}
+
+.reg__label {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.reg__input {
+  border: none;
+  background: #f8f8f8;
+  border-bottom: 1px solid black;
+  margin: 1em 0;
+  font-size: 1.2rem;
+}
+
+.reg__input:focus,
+.reg__input:hover {
+  outline: none;
+}
+
+::placeholder {
+  opacity: 0.6;
+}
+
+.reg__btn {
+  border: none;
+  border-radius: 25px;
+  background: #143774;
+  color: #f8f8f8;
+  font-weight: 700;
+  width: 50%;
+  padding: 1em;
+  display: block;
+  margin: auto;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.reg__btn:hover {
+  background: #277d68;
+  color: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#login {
+  border-top: 1px solid black;
+  margin-top: 2em;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.reg__l__btn {
+  text-decoration: none;
+  color: #143774;
+}
+/* 
+a:hover,
+a:focus {
+  color: #e5eefd;
+} */
+
+@media (max-width: 675px) {
+  .reg__image {
+    min-width: 100%;
+    width: 100%;
+  }
+  .reg__main {
+    left: 10%;
+    background: #f8f8f8;
+    min-height: 50%;
+    min-width: 80%;
+    top: 7%;
+  }
+  #reg__title {
+    font-size: 1.2rem;
+    padding: 1em 0;
+  }
+  .reg__sub {
+    font-size: 1rem;
+  }
+  .reg__form {
+    width: 80%;
+  }
+  .reg__label {
+    font-size: 1rem;
+  }
+  .reg__input {
+    font-size: 1rem;
+  }
+  .reg__btn {
+    font-size: 1rem;
+    width: 80%;
+  }
+  #login {
+    margin-top: -0.5em;
+    margin-bottom: 1.5em;
+  }
+}

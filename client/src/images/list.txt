@@ -1,0 +1,6 @@
+search
+plus
+menu
+close
+imageadd
+cancel

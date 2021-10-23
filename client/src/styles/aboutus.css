@@ -1,0 +1,122 @@
+.about_container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  padding: 2rem;
+  width: 90%;
+  height: 67%;
+  max-width: 100%;
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.about__block {
+  width: 50%;
+  border-right: 2px solid #000;
+  margin-left: 2rem;
+}
+
+.about__block:last-child {
+  border: none;
+}
+
+.about__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about__par {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.me {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.about__img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about__email {
+  margin-left: 0.6rem;
+}
+
+.about__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.about__simg {
+  width: 30px;
+  height: 30px;
+  display: block;
+  object-fit: cover;
+}
+
+.about__copy {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+.about__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__label {
+  font-size: 1.2rem;
+  padding-bottom: 0.3rem;
+  margin: 0.5rem 1rem;
+}
+
+.about__input {
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5em 0.8em;
+  line-height: 0.1rem;
+  margin: 0 1rem 1rem 1rem;
+  vertical-align: center;
+}
+
+.about__textarea {
+  border: none;
+  outline: none;
+  height: 9rem;
+  background: #eee;
+  border-radius: 5px;
+  margin: 0 1rem 1rem 1rem;
+  padding: 0.5em 0.8em;
+  vertical-align: center;
+}
+
+.about__succ {
+  color: #00a36c;
+  text-align: center;
+  font-weight: 600;
+}
+
+.about__btn {
+  padding: 1rem 2rem;
+  margin: 1rem 1rem 0 1rem;
+  font-size: 1rem;
+}
