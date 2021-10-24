@@ -263,11 +263,35 @@
 
 .comment__card {
   display: flex;
-  flex-direction: column;
   margin: 1rem;
   padding: 1rem;
   background: #ccc;
   border-radius: 0 10px 10px 10px;
+}
+
+.comment__card2 {
+  display: flex;
+  align-items: center;
+}
+
+.comment__img {
+  display: block;
+  width: 4rem;
+  object-fit: cover;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.comment {
+  margin-left: 1rem;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.comment_lnk {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
 }
 
 .Edituser__cancel {

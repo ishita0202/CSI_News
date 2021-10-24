@@ -8,6 +8,7 @@ import jwt from 'jsonwebtoken';
 import AddIcon from '../../images/plus.png';
 import AddComments from '../../components/addComments';
 import "../../styles/admin.css";
+import CommentDisplay from '../../components/CommentDisplay';
 
 const News = () => {
     const { id } = useParams();
@@ -15,15 +16,14 @@ const News = () => {
     const [user, setUser] = useState([]);
     const [saved, setSaved] = useState();
     const [addCmnt, setAddCmnt] = useState(false);
-    const [cmnt, setCmnt] = useState([]);
+    const [showComments, setShowComments] = useState([]);
     const user_id = jwt.decode(localStorage.getItem("user")).id;
     
     useEffect(() => {
         async function fetchData() {
             const res = await getDataAPI(`/news/${id}`);
             setNews(res.data.news);
-            setCmnt(res.data.comments);
-            console.log(res);
+            setShowComments(res.data.comments);
             const res1 = await getDataAPI(`user/${user_id}`);
             setUser(res1.data.user);
         }
@@ -47,7 +47,7 @@ const News = () => {
     const handleSaveNews = async () => {
         try {
             const newUser = {...user, saved: [...user.saved, id]};
-            await patchDataAPI(`saveNews/${user_id}/${id}`, newUser);
+            await patchDataAPI(`saveNews/${id}`, newUser, localStorage.getItem("user"));
             setSaved(true);
         } catch (err) {
             err.response.data.msg && setSaved({...saved, err: err.response.data.msg});
@@ -90,13 +90,16 @@ const News = () => {
                 </button>
             </div>
             {
-                addCmnt && <AddComments setAddCmnt={setAddCmnt} postId={news._id} postUserId={news.user}/>
+                addCmnt && <AddComments setAddCmnt={setAddCmnt} postId={news} postUserId={news.user}/>
             }
+            <commentDisply />
             <h2>Comments: </h2>
             {
-                cmnt.map( (cmnt,index) =>(
-                    <div className="comment__card">
-                    <h2 className="comment">{cmnt.content}</h2>
+                showComments.map((cmnt, index) => (
+                    <div>
+                        <div className="comment__card">
+                            <CommentDisplay key={index} cmnt={cmnt}/>
+                        </div>
                     </div>
                 ))
             }

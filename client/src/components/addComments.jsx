@@ -1,10 +1,10 @@
 import React,{ useState } from 'react';
 import closeIcon from '../images/delete.png';
-import { postDataAPI } from '../utils/fetchData';
+import { postDataAPI, getDataAPI } from '../utils/fetchData';
 import jwt from 'jsonwebtoken';
 
 
-const AddComments = ({setAddCmnt,postId,postUserId}) => {
+const AddComments = ({setAddCmnt, postId, postUserId}) => {
     const state = {
         content: '',
     };
@@ -22,7 +22,13 @@ const AddComments = ({setAddCmnt,postId,postUserId}) => {
         
         const id = jwt.decode(localStorage.getItem("user")).id;
         try {
-            await postDataAPI('addcomment', {content,postId:postId,postUserId:postUserId,user:id});
+            const res1 = await getDataAPI(`user/${id}`);
+            const comment = {
+                content,
+                user: res1.data.user,
+                createdAt: new Date().toISOString(),
+            }
+            await postDataAPI('addcomment', {...comment, postId: postId, postUserId: postUserId}, localStorage.getItem("user"));
         } catch (err) {
             err.response.data.msg && setCmnt({...cmnt, err: err.response.data.msg});
         }
