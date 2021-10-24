@@ -113,7 +113,7 @@ const newsCtrl = {
     },
     newsCat: async (req, res) => {
         try {
-            const news = await News.find({category:req.params.id})
+            const news = await News.find({category:req.params.id}).sort('-createdAt');
             
             if(!news)
                 return res.status(400).json({msg: "This News does not exist"});
