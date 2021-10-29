@@ -3,7 +3,7 @@
 This project is developed in MERN Stack
 
 <br>
-<img src="https://github.com/ishita0202/CSI_News/blob/master/client/src/images/csi_logo.png" width="400" height="400">
+<img src="https://user-images.githubusercontent.com/58694466/139426184-8925f337-132d-4b78-9c38-5dddbc1ee45b.png" width="600" height="400">
 In todays world people have no time to be updated through newspaper or watching or listening the news on television or radios. People today need to be updated on daily basis in this competitive world. Most of the people get the information about the world around through the internet. "CSI NEWS Portal" is a service introduced to meet the above requirement and to make the people updated about the news, views, reviews, breaking news and latest headlines in different fields.
 <br>
 
