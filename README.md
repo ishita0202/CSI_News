@@ -35,7 +35,7 @@ npm install react-script --save
 npm start
 ```
 
-## Sreens :
+## Screens :
 <p align="center">
 <img src="https://user-images.githubusercontent.com/58694466/139423194-d92b1b60-aec5-4f3d-8c70-68997a8f65b7.png" width="300" >
 <img src="https://user-images.githubusercontent.com/58694466/139423022-83ff8b92-10ff-42f9-82fc-5b49f38fd099.png" width="300" >
