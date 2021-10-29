@@ -56,14 +56,14 @@ h1 {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
 }
-button {
+.homecard__btn {
   margin-bottom: 10px;
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px;
 }
-button:hover {
+.homecard__btn:hover {
   background-color: black;
   color: white;
   transition: 0.5s;

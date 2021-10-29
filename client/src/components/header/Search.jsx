@@ -35,7 +35,8 @@ const Search = ({sprite}) => {
                 className="input"
                 placeholder="Enter News name here..."
                 value={search}
-                onChange={e => setSearch(e.target.value.toLowerCase())}
+                autoComplete="off"
+                onChange={e => setSearch(e.target.value.replace(/ /g, ''))}
             />
             <button className="btn btn--primary">
                 {

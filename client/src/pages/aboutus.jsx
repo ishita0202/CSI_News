@@ -34,7 +34,7 @@ const Aboutus = () => {
         <div className="about_container">
             <div className="about__block">
                 <h2 className="about__title">About Us:</h2>
-                <p className="about__par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus harum, laboriosam sapiente repudiandae veniam cumque vero eveniet doloremque maxime dolorum!</p>
+                <p className="about__par">CSI News is multifaceted digital media to helping citizens, consumers, business leaders. We publish independent reporting, rankings, data journalism and advice that has earned the trust of our readers and users. Thank you for visiting</p>
                 <div className="ourself">
                     <span className="me">
                         <img src={img} className="about__img" alt="profile"/>
@@ -56,7 +56,7 @@ const Aboutus = () => {
                 <p className="about__copy">©Copyright 2021 CSI NEWS</p>
             </div>
             <div className="about__block">
-                <h2 className="about__title">Contect Us:</h2>
+                <h2 className="about__title">Contact Us:</h2>
                 <form className="about__form">
                     <label htmlFor="email" className="about__label">Email Address:</label>
                     <input 

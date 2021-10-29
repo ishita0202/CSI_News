@@ -46,8 +46,8 @@ const EditUser = ({ setEditUser, userInfo }) => {
 
   return (
     <div className="Edituser__main">
-      <button onClick={() => setEditUser(false)} className="addNews__close">
-        <img className="Edituser__cancel" src={deleteIcon} alt="cancel"/>
+      <button onClick={() => setEditUser(false)} className="addNews__close btn">
+        <img className="icon" src={deleteIcon} alt="cancel"/>
       </button>
       <form onSubmit={handleSubmit} className="addNews__form">
         <div>

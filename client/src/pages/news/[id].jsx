@@ -18,12 +18,14 @@ const News = () => {
     const [addCmnt, setAddCmnt] = useState(false);
     const [showComments, setShowComments] = useState([]);
     const user_id = jwt.decode(localStorage.getItem("user")).id;
+    const [len, setLen] = useState();
     
     useEffect(() => {
         async function fetchData() {
             const res = await getDataAPI(`/news/${id}`);
             setNews(res.data.news);
             setShowComments(res.data.comments);
+            setLen(res.data.comments.length);
             const res1 = await getDataAPI(`user/${user_id}`);
             setUser(res1.data.user);
         }
@@ -70,15 +72,15 @@ const News = () => {
 
     return (
         <div className="news_container">
+            <div className="newscard__header">
+                <p className="newscard__title">{news.title}</p>
+            </div>
             <div className="newscard__img">
                 <img className="newscard__i" src={news.images[0].url} alt="news"/>
             </div>
-            <div className="newscard__header">
-                <p className="newscard__title">{news.title}</p>
-                <div className="newscard__func">Category: {news.category}</div>
-                <div className="newscard__func">{moment(news.createdAt).fromNow()}</div>
-            </div>
             <div className="newscard__content">{news.content}</div>
+            <div className="newscard__func" style={{marginTop: "1rem"}}>Category: {news.category}</div>
+            <div className="newscard__func">{moment(news.createdAt).fromNow()}</div>
             <div className="newscard__menu">
                 {
                     saved
@@ -92,10 +94,14 @@ const News = () => {
             {
                 addCmnt && <AddComments setAddCmnt={setAddCmnt} postId={news} postUserId={news.user}/>
             }
-            <commentDisply />
+            {
+                console.log(len)
+            }
             <h2>Comments: </h2>
             {
-                showComments.map((cmnt, index) => (
+                len === 0
+                ? <h2 className="no__comment">No Comments</h2>
+                : showComments.map((cmnt, index) => (
                     <div>
                         <div className="comment__card">
                             <CommentDisplay key={index} cmnt={cmnt}/>

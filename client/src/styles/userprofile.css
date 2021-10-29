@@ -13,11 +13,13 @@
 
 .saved__container {
   width: 70%;
+  height: 30rem;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   padding: 2rem;
   overflow: auto;
+  /* background: grey; */
 }
 
 .saved__news {
@@ -57,6 +59,7 @@
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
+  object-fit: cover;
 }
 .user__details {
   padding: 3%;
@@ -71,6 +74,12 @@
 }
 .user__website {
   padding: 1%;
+}
+
+.no__savednews {
+  text-align: center;
+  margin: 2rem 0;
+  color: #aaa;
 }
 
 @media screen and (max-width: 768px) {

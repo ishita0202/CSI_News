@@ -11,7 +11,7 @@ const HomeCard = ({n}) => {
                     <h1>{n.title}</h1>
                 </div>
                 <div className="des">
-                    <button ><Link className="btn1" to={`/news/${n._id}`}>Read More...</Link></button>
+                    <button className="homecard__btn"><Link className="btn1" to={`/news/${n._id}`}>Read More...</Link></button>
                 </div>
             </div>
     )

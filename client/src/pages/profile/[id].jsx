@@ -11,6 +11,7 @@ const User = () => {
     const [editUser, setEditUser] = useState(false);
     const [user, setUser] = useState([]);
     const [saveNews, setSaveNews] = useState([]);
+    const [len, setLen] = useState();
 
     useEffect(() => {
         async function fetchData() {
@@ -18,6 +19,7 @@ const User = () => {
             setUser(res.data.user);
             const res1 = await getDataAPI('getSavedNews', localStorage.getItem("user"));
             setSaveNews(res1.data.saveNews);
+            setLen(res1.data.saveNews.length);
         };
         fetchData();
     }, [id]);
@@ -33,7 +35,7 @@ const User = () => {
                 <h2 className="user__website">{user.website}</h2>
                 <h2 >Create at {moment(user.createdAt).fromNow()}</h2>
                 </div>
-                <button onClick={() => setEditUser(true)}>Edit Profile</button>
+                <button className="homecard__btn" onClick={() => setEditUser(true)}>Edit Profile</button>
                 {
                     editUser && <EditUser setEditUser={setEditUser} userInfo={user}/>
                 }
@@ -41,7 +43,9 @@ const User = () => {
             <div className="saved__container">
                 <h2 className="saved__title">Saved News:</h2>
                 {
-                    saveNews.map(news => (
+                    len === 0
+                    ? <h2 className="no__savednews">No Saved News</h2>
+                    : saveNews.map(news => (
                         <div className="saved__news">
                             <img className="saved__img" src={news.images[0].url} alt="news"/>
                             <div>
